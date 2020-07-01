@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    padding:    0;
+    margin:     0;
+}
+
+h1{
+    font-family: Josefin Sans;
+    font-weight: 700;
+    font-size: 75px;
+
+    line-height: 1;
+}
+
+p{
+    font-family : Josefin Sans;
+    font-weight: 300;
+    font-size: 25px;
+
+    line-height: 1.25;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.btn {
+    user-select: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Josefin Sans;
+    font-weight: 300;
+
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition-property: background, color;
+    transition-duration: .25s;
+}
+
+.btn.primary{
+    background: #328916;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: #fff;
+    color: #328916;
+}
+.btn.secondary {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btn.secondary:hover {
+    background: rgba(0,0,0,.25)
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+
+    background: url(assets/image/hero-image.jpg) no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+    padding: 0 50px;
+}
+
+#hero nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    user-select: none;
+}
+
+#hero nav ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#hero nav ul li {
+    margin: 0 25px;
+}
+
+#hero nav ul li:last-child {
+    margin-right: 0;
+}
+
+#hero nav ul li a {
+    text-decoration: none;
+    font-family: Josephin;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#hero nav ul li a:not(.btn) {
+    transition: color .25s;
+}
+
+#hero nav ul li a:not(.btn):hover,#hero nav ul li a.active {
+    color: #328916;
+}
+
+#hero aside {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero aside p{
+    margin: 40px 0 80px 0;
+}
+
+
+#help {
+    padding: 150px 0;
+}
+
+#help .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-align: center;
+}
+
+#help .head h1{
+    text-transform: uppercase;
+}
+
+#help .head p {
+    margin-top: 50px;
+}
+
+#help .head .line {
+    margin: 50px 0;
+    height: 10px;
+    width: 100px;
+    background: #328916;
+}
+
+#help ul{
+    user-select: none;
+    display: flex;
+    justify-content: center;
+}
+
+#help ul li {
+    width: 400px;
+    height: 550px;
+
+    position: relative;
+    overflow:hidden;
+    
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#help ul li::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,.3);
+    z-index: -1;
+
+    will-change: background-color;
+    transition: background-color .25s;
+}
+
+#help ul li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
+
+    border: 1px solid #fff;
+}
+
+#help ul li:not(:first-child) {
+    margin-left: 75px;
+}
+
+#help ul li span{
+    font-family: Josephin Sans;
+    font-weight: 500;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    max-width: 80%
+    
+}
+
+#help ul li img {
+    height: 100%;
+    position: absolute;
+    z-index:-2;
+
+    transform: scale(1);
+
+    will-change: transform;
+    transition: transform .25s;
+    
+}
+
+#help ul li:hover {
+    cursor: pointer;
+}
+
+#help ul li:hover img{
+    transform: scale(1.25);
+}
+
+#help ul li:hover::before {
+    background-color: rgba(0,0,0,.6);
+}
+
+#help ul li:nth-child(1) img {
+    left: -62.5%;
+}
+#help ul li:nth-child(2) img {
+    left: -45%;
+}
+
+footer{
+    height: 100px;
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000;
+}
+
+footer span{
+    font-family: Josephin;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+}
